@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Un pequeño adelanto de tu cumpleaños ❤️</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Fondo -->
+
+    <div id="stars"></div>
+
+    <div class="overlay"></div>
+
+    <!-- ========================= -->
+    <!-- BIENVENIDA -->
+    <!-- ========================= -->
+
+    <section id="welcome" class="screen active">
+
+        <div class="content">
+
+            <p class="small">
+                Un pequeño adelanto...
+            </p>
+
+            <h1>
+                Para Mi Jessika Natalia ❤️
+            </h1>
+
+            <p id="phrase"></p>
+
+            <button id="startButton">
+                🎁 Descubrir mi sorpresa 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- CARTA -->
+    <!-- ========================= -->
+
+ <section id="letter" class="screen">
+
+    <div class="letter-scene">
+
+        <!-- SOBRE -->
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-pocket-left"></div>
+            <div class="envelope-pocket-right"></div>
+            <div class="envelope-body"></div>
+            <div class="wax-seal" id="waxSeal">❤</div>
+            <p class="envelope-hint">Toca el sobre para abrirlo</p>
+        </div>
+
+        <!-- CARTA -->
+        <div class="letter-box" id="letterBox">
+            <div class="letter-paper">
+                <h2>Mi querida Jessika Natalia ❤️</h2>
+                <p id="letterText"></p>
+                <button id="nextPhotos">🎁 Descubrir mi regalo</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ========================= -->
+    <!-- GALERÍA -->
+    <!-- ========================= -->
+
+    <section id="gallery" class="screen">
+
+        <div class="content">
+
+            <h2>
+                Algunos de nuestros recuerdos 📸
+            </h2>
+
+            <p class="description">
+                Muy pronto este espacio estará lleno de nuestros momentos favoritos.
+            </p>
+
+            <div class="gallery">
+
+    <div class="polaroid">
+        <img src="assets/photos/foto 1.jpg">
+        <p>Un muy bonito recuerdo ❤️</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="assets/photos/foto 2.jpg">
+        <p>Contigo cualquier lugar es especial.</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="assets/photos/foto 3.jpg">
+        <p>Mi sonrisa favorita empieza contigo.</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="assets/photos/foto 4.jpg">
+        <p>Cada momento contigo vale oro.</p>
+    </div>
+
+    <div class="polaroid">
+        <img src="assets/photos/foto 5.jpg">
+        <p>Y esto apenas comienza... ❤️</p>
+    </div>
+
+</div>
+
+<button id="nextGift">
+
+    🎁 Quiero crear un recuerdo más...
+
+</button>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- REGALO -->
+    <!-- ========================= -->
+
+   <section id="gift" class="screen">
+
+    <div class="content">
+
+        <h2>Una última pista... ❤️</h2>
+
+        <p class="giftText">
+            Hay recuerdos que empiezan con un simple clic...
+        </p>
+
+        <!-- 🎁 CAJA -->
+        <div class="giftBox" id="giftBoxEl">
+
+    <div class="giftGlow"></div>
+    <div class="giftLid">
+        <div class="giftBow"></div>
+    </div>
+    <div class="giftBody"></div>
+    <div class="giftRibbonV"></div>
+    <div class="giftRibbonH"></div>
+
+</div>
+
+        <button id="openGift">
+            🎁 Abrir mi regalo
+        </button>
+
+    </div>
+
+</section>
+    <!-- ========================= -->
+    <!-- POSTER -->
+    <!-- ========================= -->
+
+<section id="poster" class="screen">
+
+    <div class="content">
+
+        <h2>Nuestra próxima aventura ❤️</h2>
+
+        <img src="assets/img/poster-camilo.jpg"
+             id="posterImage"
+             alt="Poster Camilo">
+
+        <button id="nextCountdown">
+            Ver mi entrada 🎫
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- ========================= -->
+    <!-- CUENTA REGRESIVA -->
+    <!-- ========================= -->
+
+   <section id="countdown" class="screen">
+
+    <div class="content">
+
+        <h2 class="countTitle">
+            ❤️ Cada día falta un poquito menos... ❤️
+        </h2>
+
+        <div class="countdownCard">
+
+            <div class="countdownGlow"></div>
+
+            <div id="counterContainer">
+                <div id="counter">000</div>
+                <span class="daysText">días</span>
+            </div>
+
+            <div class="countdownDivider"></div>
+
+            <p class="countdownDate">11 · DICIEMBRE · 2026</p>
+
+        </div>
+
+        <p class="countPhrase">
+            Para vivir uno de los recuerdos más bonitos de nuestra historia.✨
+        </p>
+
+        <button id="showTicket">
+            🎫 Ver mi invitación VIP
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- INVITACIÓN VIP -->
+<!-- ========================= -->
+
+<section id="ticketScreen" class="screen">
+
+    <div class="content">
+
+        <h2>
+            Una invitación hecha especialmente para ti ❤️
+        </h2>
+
+        <img src="assets/img/image_1.png"
+             id="vipInvitation"
+             alt="Invitación VIP">
+
+        <button id="finalMessage">
+
+            ❤️ Un último mensaje...
+
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- ========================= -->
+    <!-- FINAL -->
+    <!-- ========================= -->
+
+   <section id="final" class="screen">
+
+    <div class="content">
+
+        <div class="finalGlow"></div>
+
+        <div class="finalCard">
+
+            <div class="finalHeartIcon">❤</div>
+
+            <h2>Gracias...</h2>
+
+            <p class="finalText">
+
+                Gracias por existir.
+                <br><br>
+                Gracias por cada abrazo.
+                <br><br>
+                Gracias por hacer mi vida muchísimo más bonita.
+                <br><br>
+                Sé que aún faltan algunos meses para tu cumpleaños...
+                <br><br>
+                Pero era imposible guardar esta sorpresa tanto tiempo.
+                <br><br>
+                Espero que el 11 de diciembre construyamos uno de los recuerdos más bonitos de nuestra historia.
+                <br><br>
+                Y recuerda una cosa...
+                <br><br>
+                Eres todo en mi vida. ❤️
+
+            </p>
+
+            <div class="finalDivider"></div>
+
+            <h3>
+                Con todo mi amor,
+                <br><br>
+                Kevin ❤️
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <audio id="bgMusic" src="assets/audio/cancion.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1361 @@
+/* =======================================
+   RESET
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#05070d;
+    color:#fff;
+    overflow:hidden;
+
+}
+
+/* =======================================
+   FONDO
+======================================= */
+
+#stars{
+
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(circle,#ffffff 1px,transparent 1px);
+
+    background-size:55px 55px;
+
+    opacity:.18;
+
+    animation:starsMove 120s linear infinite;
+
+    z-index:-3;
+
+}
+
+.overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,255,255,.06),
+    transparent 45%);
+
+    z-index:-2;
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-700px);
+
+    }
+
+}
+
+/* =======================================
+   PANTALLAS
+======================================= */
+.screen{
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.content{
+
+    width:100%;
+    max-width:900px;
+    min-height:100%;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+    box-sizing:border-box;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+    animation:fade .9s;
+
+}
+
+
+/* =======================================
+   TITULOS
+======================================= */
+
+h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    margin-top:25px;
+
+    font-size:1.7rem;
+
+    font-weight:500;
+
+}
+
+.small{
+
+    color:#ffb8d3;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+    font-size:.95rem;
+
+}
+
+/* =======================================
+   TEXTOS
+======================================= */
+
+#phrase{
+
+    min-height:70px;
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+    color:#d9d9d9;
+
+    margin:35px auto;
+
+    max-width:720px;
+
+    transition:.6s;
+
+}
+
+.description,
+.giftText,
+.finalText{
+
+    color:#dddddd;
+
+    line-height:1.9;
+
+    font-size:1.15rem;
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+/* =======================================
+   BOTONES
+======================================= */
+
+button{
+
+    margin-top:35px;
+
+    padding:18px 48px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(135deg,#ff5d9d,#ff2d74);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 15px 40px rgba(255,70,120,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 22px 55px rgba(255,70,120,.45);
+
+}
+
+/* =======================================
+   CARTA
+======================================= */
+
+
+
+#letterText{
+
+    margin-top:30px;
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+    color:#ececec;
+
+    min-height:250px;
+
+}
+
+/* =======================================
+   GALERIA
+======================================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:45px;
+
+}
+
+.photo{
+
+    height:220px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#aaa;
+
+    font-size:1.1rem;
+
+}
+
+/* =======================================
+   REGALO
+======================================= */
+
+
+/* =======================================
+   POSTER
+======================================= */
+
+#posterImage{
+
+    width:100%;
+
+    max-width:420px;
+
+    border-radius:25px;
+
+    margin-top:35px;
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.45);
+
+}
+
+/* =======================================
+   CONTADOR
+======================================= */
+
+#counter{
+
+    font-size:6rem;
+
+    font-weight:700;
+
+    margin:30px 0;
+
+    color:#ff6aa6;
+
+}
+
+/* =======================================
+   FINAL
+======================================= */
+
+.finalText{
+
+    margin-top:40px;
+
+}
+
+/* =======================================
+   ANIMACION
+======================================= */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.5rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    h3{
+
+        font-size:1.3rem;
+
+    }
+
+    #phrase{
+
+        font-size:1.1rem;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .photo{
+
+        height:240px;
+
+    }
+
+
+    #counter{
+
+        font-size:4rem;
+
+    }
+
+}
+
+/* ============================
+POLAROID
+============================ */
+
+.gallery{
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-start;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-top:50px;
+
+}
+
+.polaroid{
+
+background:white;
+
+padding:12px;
+
+width:220px;
+
+border-radius:8px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+transition:.4s;
+
+transform:rotate(-2deg);
+
+}
+
+.polaroid:nth-child(even){
+
+transform:rotate(2deg);
+
+}
+
+.polaroid:hover{
+
+transform:scale(1.06) rotate(0deg);
+
+}
+
+.polaroid img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:4px;
+
+display:block;
+
+}
+
+.polaroid p{
+
+margin-top:12px;
+
+color:#444;
+
+font-size:.95rem;
+
+font-family:'Playfair Display',serif;
+
+text-align:center;
+
+}
+/*============================
+CAJA DE REGALO PREMIUM
+=============================*/
+.giftBox{
+    position:relative;
+    width:240px;
+    height:220px;
+    margin:60px auto;
+    cursor:pointer;
+    transform-style:preserve-3d;
+    transition:transform .6s ease;
+}
+
+.giftBox:hover{
+    transform:scale(1.04) rotate(-1deg);
+}
+
+/* Resplandor detrás de la caja */
+.giftGlow{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:280px;
+    height:280px;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle, rgba(212,175,55,.35), transparent 70%);
+    filter:blur(10px);
+    z-index:0;
+    animation:glowPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes glowPulse{
+    0%,100%{ opacity:.5; transform:translate(-50%,-50%) scale(1); }
+    50%{ opacity:1; transform:translate(-50%,-50%) scale(1.1); }
+}
+
+/* Cuerpo de la caja */
+.giftBody{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:240px;
+    height:150px;
+    background:linear-gradient(155deg,#1c1c1c,#000000);
+    border:1px solid #d4af37;
+    border-radius:0 0 14px 14px;
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.6),
+        inset 0 0 25px rgba(212,175,55,.08);
+    z-index:2;
+}
+
+/* Tapa */
+.giftLid{
+    position:absolute;
+    top:35px;
+    left:-6px;
+    width:252px;
+    height:42px;
+    background:linear-gradient(155deg,#2a2a2a,#0a0a0a);
+    border:1px solid #d4af37;
+    border-radius:10px;
+    box-shadow:0 12px 25px rgba(0,0,0,.5);
+    z-index:6;
+    transform-origin:10% 50%;
+    transition:transform 1s cubic-bezier(.6,.05,.28,.91), opacity .6s ease .4s;
+}
+
+/* Moño dorado sobre la tapa */
+.giftBow{
+    position:absolute;
+    top:-22px;
+    left:50%;
+    transform:translateX(-50%);
+    width:46px;
+    height:46px;
+    z-index:7;
+    transition:opacity .5s ease, transform .5s ease;
+}
+
+.giftBow::before,
+.giftBow::after{
+    content:"";
+    position:absolute;
+    top:0;
+    width:22px;
+    height:34px;
+    background:linear-gradient(135deg,#f5d67d,#b8860b);
+    border-radius:60% 60% 60% 0;
+    box-shadow:inset 0 0 6px rgba(0,0,0,.25);
+}
+
+.giftBow::before{
+    left:0;
+    transform:rotate(-25deg);
+}
+
+.giftBow::after{
+    right:0;
+    border-radius:60% 60% 0 60%;
+    transform:rotate(25deg);
+}
+
+/* Listones */
+.giftRibbonV{
+    position:absolute;
+    width:20px;
+    height:150px;
+    bottom:0;
+    left:110px;
+    background:linear-gradient(180deg,#f5d67d,#b8860b);
+    z-index:4;
+    transition:transform .8s ease, opacity .8s ease;
+}
+
+.giftRibbonH{
+    position:absolute;
+    width:240px;
+    height:20px;
+    bottom:70px;
+    left:0;
+    background:linear-gradient(90deg,#f5d67d,#b8860b);
+    z-index:4;
+    transition:transform .8s ease .1s, opacity .8s ease .1s;
+}
+
+/* =======================================
+   ESTADO ABIERTO
+======================================= */
+
+.giftBox.open .giftLid{
+    transform:rotateZ(-115deg) translateY(-10px);
+    opacity:0;
+}
+
+.giftBox.open .giftBow{
+    opacity:0;
+    transform:translateX(-50%) translateY(-30px) scale(.5) rotate(20deg);
+}
+
+.giftBox.open .giftRibbonV{
+    transform:translateX(-80px) rotate(-20deg);
+    opacity:0;
+}
+
+.giftBox.open .giftRibbonH{
+    transform:translateX(90px) rotate(15deg);
+    opacity:0;
+}
+
+.giftBox.open .giftGlow{
+    animation:glowBurst .8s ease forwards;
+}
+
+@keyframes glowBurst{
+    to{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(1.8);
+    }
+}
+
+/* Destellos (creados por JS) */
+.sparkle{
+    position:fixed;
+    width:8px;
+    height:8px;
+    background:#f5d67d;
+    border-radius:50%;
+    box-shadow:0 0 10px 2px rgba(245,214,125,.8);
+    pointer-events:none;
+    z-index:999;
+    animation:sparkleFly 1s ease-out forwards;
+}
+
+@keyframes sparkleFly{
+    to{
+        transform:translate(var(--sx),var(--sy)) scale(0);
+        opacity:0;
+    }
+}
+
+
+
+#posterImage{
+
+    width:100%;
+    max-width:420px;
+    border-radius:25px;
+    margin-top:35px;
+
+    opacity:0;
+    transform:scale(0.85);
+
+    filter:blur(10px);
+
+    transition:all 1.2s ease;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+}
+
+#posterImage.show{
+
+    opacity:1;
+    transform:scale(1);
+
+    filter:blur(0px);
+
+}
+
+
+/*==================================
+      CONTADOR PREMIUM
+===================================*/
+
+.countTitle{
+
+    font-size:2.5rem;
+
+    margin-bottom:35px;
+
+}
+
+#counterContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin:25px 0;
+
+}
+
+#counter{
+
+    font-size:7rem;
+
+    font-weight:800;
+
+    color:#ff5e9a;
+
+    text-shadow:
+
+        0 0 20px rgba(255,94,154,.45);
+
+    animation:counterPulse 2s infinite;
+
+}
+
+.daysText{
+
+    font-size:1.6rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#ffffff;
+
+}
+
+.countPhrase{
+
+    max-width:650px;
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+    color:#d8d8d8;
+
+    margin:35px auto;
+
+}
+
+@keyframes counterPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.07);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.content::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.content::-webkit-scrollbar-thumb{
+
+    background:#ff5e9a;
+
+    border-radius:20px;
+
+}
+
+/* =======================================
+   ESCENA DE LA CARTA
+======================================= */
+
+#letter.screen{
+    align-items:center;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.letter-scene{
+    position:relative;
+    width:100%;
+    max-width:420px;
+    margin:auto;
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 10px;
+    box-sizing:border-box;
+}
+
+.letter-scene.expanded{
+    justify-content:flex-start;
+}
+
+/* =======================================
+   SOBRE
+======================================= */
+
+.envelope{
+    position:relative;
+    width:100%;
+    height:260px;
+    cursor:pointer;
+    transition:opacity .7s ease, transform .7s ease;
+}
+
+.envelope-body{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(155deg,#e8d5ad,#c9a15a);
+    border-radius:10px;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+    border:1px solid rgba(255,255,255,.25);
+}
+
+/* Bolsillos laterales (efecto sobre real) */
+.envelope-pocket-left,
+.envelope-pocket-right{
+    position:absolute;
+    bottom:0;
+    width:0;
+    height:0;
+    border-style:solid;
+    z-index:2;
+}
+
+.envelope-pocket-left{
+    left:0;
+    border-width:0 0 130px 210px;
+    border-color:transparent transparent rgba(138,106,52,.55) transparent;
+}
+
+.envelope-pocket-right{
+    right:0;
+    border-width:130px 0 0 210px;
+    border-color:transparent transparent transparent rgba(138,106,52,.55);
+}
+
+/* Solapa superior */
+.envelope-flap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:140px;
+    background:linear-gradient(155deg,#d9bd85,#b5893f);
+    clip-path:polygon(0 0, 100% 0, 50% 90%);
+    transform-origin:top;
+    transform-style:preserve-3d;
+    transition:transform 1s cubic-bezier(.6,.05,.28,.91);
+    z-index:5;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.envelope.opening .envelope-flap{
+    transform:rotateX(180deg);
+    z-index:1;
+}
+
+/* Sello de cera */
+.wax-seal{
+    position:absolute;
+    top:98px;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#e0455f,#8c1f33);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    color:#ffd9d9;
+    box-shadow:0 8px 18px rgba(0,0,0,.4), inset 0 0 8px rgba(255,255,255,.25);
+    z-index:6;
+    transition:opacity .5s ease, transform .5s ease;
+}
+
+.envelope.opening .wax-seal{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(0.4) rotate(25deg);
+}
+
+.envelope-hint{
+    position:absolute;
+    bottom:-38px;
+    left:0;
+    width:100%;
+    text-align:center;
+    color:#e8d5ad;
+    font-size:.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    animation:hintPulse 1.8s ease-in-out infinite;
+}
+
+.envelope.opening .envelope-hint{
+    opacity:0;
+}
+
+@keyframes hintPulse{
+    0%,100%{ opacity:.5; }
+    50%{ opacity:1; }
+}
+
+.envelope.hide{
+    opacity:0;
+    transform:translateY(-30px) scale(.85);
+    pointer-events:none;
+}
+
+/* =======================================
+   CARTA (pergamino)
+======================================= */
+
+
+.letter-box.show{
+    position:relative;
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+}
+
+.letter-paper{
+    width:100%;
+    max-width:600px;
+    padding:55px 45px;
+    border-radius:6px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(180,140,70,.12), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(180,140,70,.12), transparent 40%),
+        linear-gradient(#f6ecd4,#efe1bd);
+    color:#5a4423;
+    box-shadow:0 30px 70px rgba(0,0,0,.5), inset 0 0 40px rgba(139,106,52,.15);
+    border:1px solid rgba(139,106,52,.35);
+}
+
+.letter-paper h2{
+    color:#8a5a2b;
+    font-size:2.1rem;
+}
+
+.letter-paper #letterText{
+    color:#5a4423;
+    font-size:1.1rem;
+    line-height:2;
+    white-space:pre-wrap;
+    min-height:220px;
+}
+
+.letter-paper button{
+    background:linear-gradient(135deg,#c9a15a,#8a5a2b);
+    box-shadow:0 15px 40px rgba(138,90,43,.4);
+}
+
+@media(max-width:768px){
+    .envelope{ height:210px; }
+    .envelope-pocket-left{ border-width:0 0 105px 170px; }
+    .envelope-pocket-right{ border-width:105px 0 0 170px; }
+    .envelope-flap{ height:115px; }
+    .letter-paper{ padding:35px 25px; }
+}
+
+/* =======================================
+   ESCENA CARTA - RESPONSIVE
+======================================= */
+
+.letter-scene{
+    position:relative;
+    width:100%;
+    max-width:420px;
+    max-height:85vh;
+    margin:auto;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    perspective:1600px;
+    padding:10px;
+}
+
+.letter-box{
+    position:relative;
+    width:100%;
+    opacity:0;
+    transform:translateY(40px) scale(.92);
+    pointer-events:none;
+    transition:opacity 1s ease, transform 1s ease;
+}
+
+.letter-box.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+}
+
+.letter-paper{
+    width:100%;
+    padding:40px 30px;
+    border-radius:6px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(180,140,70,.12), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(180,140,70,.12), transparent 40%),
+        linear-gradient(#f6ecd4,#efe1bd);
+    color:#5a4423;
+    box-shadow:0 30px 70px rgba(0,0,0,.5), inset 0 0 40px rgba(139,106,52,.15);
+    border:1px solid rgba(139,106,52,.35);
+    box-sizing:border-box;
+}
+
+.letter-paper h2{
+    color:#8a5a2b;
+    font-size:1.8rem;
+    line-height:1.3;
+}
+
+.letter-paper #letterText{
+    color:#5a4423;
+    font-size:1.05rem;
+    line-height:1.9;
+    white-space:pre-wrap;
+}
+
+.letter-paper button{
+    background:linear-gradient(135deg,#c9a15a,#8a5a2b);
+    box-shadow:0 15px 40px rgba(138,90,43,.4);
+}
+
+@media(min-width:900px){
+
+    .letter-scene{
+        max-width:600px;
+    }
+
+    .letter-paper{
+        padding:55px 45px;
+    }
+
+    .letter-paper h2{
+        font-size:2.1rem;
+    }
+
+    .letter-paper #letterText{
+        font-size:1.1rem;
+    }
+}
+
+.countdownCard{
+
+    position:relative;
+
+    background:linear-gradient(155deg,#151515,#0a0a0a);
+
+    border:1px solid rgba(212,175,55,.4);
+
+    border-radius:24px;
+
+    padding:50px 60px;
+
+    margin:35px auto;
+
+    max-width:420px;
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.5),
+        inset 0 0 30px rgba(212,175,55,.06);
+
+    overflow:hidden;
+
+}
+
+.countdownGlow{
+
+    position:absolute;
+
+    top:-40%;
+
+    left:50%;
+
+    width:280px;
+
+    height:280px;
+
+    transform:translateX(-50%);
+
+    background:radial-gradient(circle, rgba(255,94,154,.25), transparent 70%);
+
+    filter:blur(20px);
+
+    z-index:0;
+
+    animation:glowPulse 3s ease-in-out infinite;
+
+}
+
+#counterContainer{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+.countdownDivider{
+
+    width:60px;
+
+    height:2px;
+
+    background:linear-gradient(90deg,transparent,#d4af37,transparent);
+
+    margin:25px auto;
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+.countdownDate{
+
+    letter-spacing:4px;
+
+    font-size:.95rem;
+
+    color:#d4af37;
+
+    font-weight:600;
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+@media(max-width:768px){
+
+    .countdownCard{
+
+        padding:35px 30px;
+
+    }
+
+}
+
+/* =======================================
+   INVITACIÓN VIP
+======================================= */
+
+#vipInvitation{
+
+    width:100%;
+    max-width:420px;
+    height:auto;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+    display:block;
+
+    opacity:0;
+    transform:scale(0.85);
+    filter:blur(10px);
+    transition:all 1.2s ease;
+
+}
+
+#vipInvitation.show{
+    opacity:1;
+    transform:scale(1);
+    filter:blur(0px);
+}
+
+@media(max-width:768px){
+
+    #vipInvitation{
+        max-width:96%;
+        border-radius:14px;
+    }
+
+}
+
+@media(min-width:900px){
+
+    #vipInvitation{
+        max-width:600px;
+    }
+
+}
+
+/* ============================
+   PANTALLA FINAL - PREMIUM
+============================ */
+
+#final .content{
+    position:relative;
+}
+
+.finalGlow{
+    position:absolute;
+    top:5%;
+    left:50%;
+    width:340px;
+    height:340px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(255,94,154,.3), transparent 70%);
+    filter:blur(30px);
+    z-index:0;
+    animation:glowPulse 3s ease-in-out infinite;
+}
+
+.finalCard{
+    position:relative;
+    z-index:1;
+    max-width:640px;
+    margin:auto;
+    padding:60px 50px;
+    border-radius:28px;
+    background:linear-gradient(155deg,#151515,#0a0a0a);
+    border:1px solid rgba(212,175,55,.4);
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.55),
+        inset 0 0 40px rgba(212,175,55,.06);
+}
+
+.finalHeartIcon{
+    font-size:2.6rem;
+    color:#ff5e9a;
+    text-shadow:0 0 25px rgba(255,94,154,.6);
+    animation:heartBeat 1.8s ease-in-out infinite;
+    margin-bottom:10px;
+}
+
+@keyframes heartBeat{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.18); }
+}
+
+#final h2{
+    background:linear-gradient(135deg,#ffd9e8,#ff5e9a,#d4af37);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    font-size:3.2rem;
+}
+
+#final .finalText{
+    margin-top:15px;
+    font-size:1.15rem;
+    line-height:2;
+    color:#e8dcc0;
+}
+
+.finalDivider{
+    width:80px;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#d4af37,transparent);
+    margin:35px auto;
+}
+
+#final h3{
+    font-family:"Playfair Display",serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:1.9rem;
+    color:#f5d67d;
+    text-shadow:0 0 20px rgba(212,175,55,.35);
+}
+
+.floatHeart{
+    position:fixed;
+    bottom:-40px;
+    font-size:1.4rem;
+    color:#ff6aa6;
+    pointer-events:none;
+    z-index:998;
+    animation:floatUp 6s linear forwards;
+    opacity:.85;
+}
+
+@keyframes floatUp{
+    0%{ transform:translateY(0) rotate(0deg); opacity:0; }
+    10%{ opacity:.9; }
+    100%{ transform:translateY(-110vh) rotate(360deg); opacity:0; }
+}
+
+@media(max-width:768px){
+    .finalCard{
+        padding:40px 25px;
+    }
+    #final h2{
+        font-size:2.3rem;
+    }
+}
+
